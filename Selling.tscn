@@ -1,63 +1,45 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Aloha.ttf" type="DynamicFontData" id=1]
-
-[sub_resource type="DynamicFont" id=1]
-size = 25
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
+[ext_resource path="res://Selling.gd" type="Script" id=1]
+[ext_resource path="res://Base.tres" type="Theme" id=3]
 
 [node name="Scene" type="Node2D"]
+script = ExtResource( 1 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 1024.0
-margin_bottom = 768.0
+margin_bottom = 640.0
+theme = ExtResource( 3 )
+color = Color( 0.482353, 0.72549, 0.8, 1 )
 
-[node name="Title" type="Label" parent="."]
-margin_top = 245.0
-margin_right = 1024.0
-margin_bottom = 345.0
-input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "BACKGROUND"
-align = 1
-valign = 1
+[node name="EndDayButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 647.0
+margin_top = 511.0
+margin_right = 907.0
+margin_bottom = 551.0
+rect_pivot_offset = Vector2( 136, 16 )
+text = "End Day"
 
-[node name="Balance" type="Label" parent="."]
-margin_left = 709.0
-margin_top = 108.0
-margin_right = 1006.0
-margin_bottom = 208.0
-input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "balance"
-align = 1
-valign = 1
+[node name="This neither" type="Button" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 123.0
+margin_top = 510.0
+margin_right = 383.0
+margin_bottom = 550.0
+rect_pivot_offset = Vector2( 136, 16 )
+text = "Sell 1 Musubi"
 
-[node name="Day" type="Label" parent="."]
-margin_left = -1.0
-margin_top = 584.0
-margin_right = 194.0
-margin_bottom = 684.0
-rect_pivot_offset = Vector2( 173, 57 )
-input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "day 1 / 30"
-align = 1
-valign = 1
-
-[node name="Temperature" type="Label" parent="."]
-margin_left = 828.0
-margin_top = 584.0
-margin_right = 1023.0
-margin_bottom = 684.0
-rect_pivot_offset = Vector2( 173, 57 )
-input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "temperature"
-align = 1
-valign = 1
+[connection signal="pressed" from="EndDayButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="EndDayButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="EndDayButton" to="." method="_on_EndDayButton_pressed"]
+[connection signal="pressed" from="This neither" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="This neither" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="This neither" to="." method="_on_BackButton_pressed"]

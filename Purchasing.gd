@@ -19,6 +19,7 @@ var items = {
 } setget _update_items
 
 func _update_items(new):
+	print(new)
 	$ItemCountContainer/SpamCountLabel.text = str(new[0])
 	$ItemCountContainer/RiceCountLabel.text = str(new[1])
 	$ItemCountContainer/NoriCountLabel.text = str(new[2])
@@ -26,7 +27,7 @@ func _update_items(new):
 	$ItemCountContainer/PosterCountLabel.text = str(new[4])
 
 # GAME VARIABLES
-var current_day = 1 setget _set_day
+var current_day = 0 setget _set_day
 func _set_day(x):
 	current_day = x
 	$Day.text = "Day "+ str(self.current_day) + " / " + \
@@ -51,11 +52,18 @@ var rng = RandomNumberGenerator.new()
 
 func _ready():
 	_prepare_new_day()
-	_render_all()
-	
-func _prepare_new_day():
-	_generate_new_weather()
 
+func _prepare_new_day():
+	# delete all posters
+	items[4] = 0
+	
+	current_day += 1
+	if current_day > get_parent().game_length_days:
+		add_child(load("GameOver.tscn").instance())
+	else:
+		_generate_new_weather()
+		_render_all()
+	
 func _generate_new_weather():
 	rng.randomize()
 	temperature = int(rng.randf_range(65.0, 90.0))
@@ -96,3 +104,6 @@ func _on_PosterBuyButton_pressed():
 	var shop = load("Shop.tscn").instance()
 	shop.item = ItemType.POSTER
 	add_child(shop)
+
+func _on_ContinueButton_pressed():
+	add_child(load("Crafting.tscn").instance())

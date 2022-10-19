@@ -79,23 +79,23 @@ margin_right = 656.0
 margin_bottom = 399.0
 rect_pivot_offset = Vector2( 64, 152 )
 
-[node name="NoriCountLabel" type="Label" parent="ItemCountContainer"]
-margin_right = 224.0
+[node name="SpamCountLabel" type="Label" parent="ItemCountContainer"]
+margin_right = 22.0
 margin_bottom = 39.0
 rect_pivot_offset = Vector2( 136, 184 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
 theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "0"
 
-[node name="SpamCountLabel" type="Label" parent="ItemCountContainer"]
+[node name="NoriCountLabel" type="Label" parent="ItemCountContainer"]
 margin_top = 43.0
-margin_right = 22.0
+margin_right = 224.0
 margin_bottom = 82.0
 rect_pivot_offset = Vector2( 136, 184 )
-size_flags_horizontal = 2
-size_flags_vertical = 2
 theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -229,4 +229,4 @@ text = "Continue"
 [connection signal="pressed" from="VBoxContainer/RiceBuyButton" to="." method="_on_RiceBuyButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/PlasticBuyButton" to="." method="_on_PlasticBuyButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/PosterBuyButton" to="." method="_on_PosterBuyButton_pressed"]
-[connection signal="pressed" from="ContinueButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]

@@ -6,4 +6,4 @@ func _ready():
 
 func _on_StartButton_pressed():
 	get_parent().remove_child(self)
-	pass # Replace with function body.
+
