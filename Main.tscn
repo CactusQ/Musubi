@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://Souvenir-Bold.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+
+[node name="Scene" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 768.0
+color = Color( 1, 0.870588, 0.52549, 1 )
+
+[node name="Title" type="Label" parent="."]
+margin_top = 144.0
+margin_right = 1024.0
+margin_bottom = 258.0
+rect_pivot_offset = Vector2( 569, 248 )
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.0784314, 0.317647, 0.741176, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Musubi Mayhem"
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 360.0
+margin_right = 989.0
+margin_bottom = 474.0
+rect_pivot_offset = Vector2( 569, 248 )
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.0313726, 0.141176, 0.333333, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Choose game length"
+align = 1
+valign = 1
+
+[node name="FiveButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 432.0
+margin_top = 488.0
+margin_right = 568.0
+margin_bottom = 522.0
+rect_pivot_offset = Vector2( 176, 35 )
+theme = SubResource( 2 )
+text = "5 days"
+
+[node name="TenButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 432.0
+margin_top = 544.0
+margin_right = 569.0
+margin_bottom = 577.0
+rect_pivot_offset = Vector2( 176, 35 )
+text = "10 days"
+
+[node name="TwentyButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 432.0
+margin_top = 600.0
+margin_right = 569.0
+margin_bottom = 633.0
+rect_pivot_offset = Vector2( 176, 35 )
+text = "20 days"
+
+[connection signal="pressed" from="FiveButton" to="." method="_on_FiveButton_pressed"]
+[connection signal="pressed" from="TenButton" to="." method="_on_TenButton_pressed"]
+[connection signal="pressed" from="TwentyButton" to="." method="_on_TwentyButton_pressed"]

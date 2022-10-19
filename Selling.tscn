@@ -25,10 +25,10 @@ align = 1
 valign = 1
 
 [node name="Balance" type="Label" parent="."]
-margin_left = 725.0
-margin_top = 1.0
-margin_right = 1022.0
-margin_bottom = 101.0
+margin_left = 709.0
+margin_top = 108.0
+margin_right = 1006.0
+margin_bottom = 208.0
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
