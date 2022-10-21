@@ -3,6 +3,7 @@ extends Node2D
 
 var item = -1
 var item_name = ""
+var NUM_MAX_POSTERS = 40
 
 var names = {
 	0:"Spam",
@@ -20,11 +21,11 @@ var qty = {
 	4:[1, 5, 20]}
 	
 var prices = {
-	0:[1, 4, 15],
-	1:[0.5, 2, 16],
-	2:[0.1, 0.4, 1.5], 
-	3:[0.05, 0.02, 0.16], 
-	4:[0.5, 2, 16]}
+	0:[0.5, 2, 6],
+	1:[0.25, 1, 3],
+	2:[0.1, 0.4, 1.2], 
+	3:[0.05, 0.02, 0.06], 
+	4:[0.5, 2, 6]}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,6 +44,13 @@ func _update_shop():
 	$Buy1.disabled = prices[item][0] > balance
 	$Buy2.disabled = prices[item][1] > balance
 	$Buy3.disabled = prices[item][2] > balance
+	
+	if item == 4:
+		var current_posters = get_parent().items[item]
+		$Subtitle.text += " (max. "+str(NUM_MAX_POSTERS)+")"
+		$Buy1.disabled = $Buy1.disabled or current_posters + qty[4][0] > NUM_MAX_POSTERS
+		$Buy2.disabled = $Buy1.disabled or current_posters + qty[4][1] > NUM_MAX_POSTERS
+		$Buy3.disabled = $Buy1.disabled or current_posters + qty[4][2] > NUM_MAX_POSTERS
 
 func _on_BackButton_pressed():
 	get_parent().remove_child(self)

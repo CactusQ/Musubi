@@ -37,9 +37,9 @@ margin_bottom = 550.0
 rect_pivot_offset = Vector2( 136, 16 )
 text = "Sell 1 Musubi"
 
-[connection signal="pressed" from="EndDayButton" to="." method="_on_ContinueButton_pressed"]
-[connection signal="pressed" from="EndDayButton" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="EndDayButton" to="." method="_on_EndDayButton_pressed"]
-[connection signal="pressed" from="This neither" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="EndDayButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="EndDayButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="This neither" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="This neither" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="This neither" to="." method="_on_BackButton_pressed"]

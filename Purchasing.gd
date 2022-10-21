@@ -11,15 +11,14 @@ enum ItemType {
 }
 
 var items = {
-	0: 0, #Spam
-	1: 0, #Rice
-	2: 0, #Nori
-	3: 0, #Plastic
-	4: 0  #Posters
+	0: 2000, #Spam
+	1: 2000, #Rice
+	2: 2000, #Nori
+	3: 2000, #Plastic
+	4: 2000  #Posters
 } setget _update_items
 
 func _update_items(new):
-	print(new)
 	$ItemCountContainer/SpamCountLabel.text = str(new[0])
 	$ItemCountContainer/RiceCountLabel.text = str(new[1])
 	$ItemCountContainer/NoriCountLabel.text = str(new[2])
@@ -33,7 +32,7 @@ func _set_day(x):
 	$Day.text = "Day "+ str(self.current_day) + " / " + \
 		str(get_parent().game_length_days)
 
-var balance_usd = 100 setget _set_balance
+var balance_usd = 20 setget _set_balance
 func _set_balance(x):
 	balance_usd = x
 	$Balance.text =  "$"+str(balance_usd)
@@ -54,9 +53,9 @@ func _ready():
 	_prepare_new_day()
 
 func _prepare_new_day():
-	# delete all posters
+	# delete all posters and rice
+	items[3] = 0
 	items[4] = 0
-	
 	current_day += 1
 	if current_day > get_parent().game_length_days:
 		add_child(load("GameOver.tscn").instance())

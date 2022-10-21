@@ -27,6 +27,7 @@ align = 1
 valign = 1
 
 [node name="Balance" type="Label" parent="."]
+visible = false
 margin_left = 360.0
 margin_top = 181.0
 margin_right = 657.0
@@ -75,6 +76,6 @@ margin_left = 383.0
 margin_top = 513.0
 margin_right = 648.0
 margin_bottom = 577.0
-text = "PLAY AGAIN"
+text = "Play again"
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

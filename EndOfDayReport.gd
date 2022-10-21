@@ -1,19 +1,15 @@
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	var sold = get_parent().musubi_sold
+	var prof = get_parent().profit
+	var crafting = get_parent().get_parent()
+	var style_name = crafting.styles[crafting.todays_style]
+	$Subtitle.text = "You sold " +str(sold)+" "+str(style_name)+" musubi for $"+str(prof)+"today."
+	find_parent("Purchasing").balance_usd += prof
 
 func _on_OkayButton_pressed():
 	var purchasing = find_parent("Purchasing")

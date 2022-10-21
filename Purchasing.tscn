@@ -24,9 +24,9 @@ theme = ExtResource( 3 )
 color = Color( 1, 0.870588, 0.52549, 1 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 672.0
+margin_left = 629.0
 margin_top = 194.0
-margin_right = 800.0
+margin_right = 757.0
 margin_bottom = 402.0
 rect_pivot_offset = Vector2( 64, 152 )
 size_flags_horizontal = 2
@@ -167,7 +167,7 @@ rect_pivot_offset = Vector2( 173, 57 )
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "0"
+text = "$0"
 align = 1
 valign = 1
 
@@ -193,7 +193,7 @@ rect_pivot_offset = Vector2( 74, 28 )
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "temperature"
+text = "weather"
 align = 1
 valign = 1
 
@@ -201,7 +201,7 @@ valign = 1
 margin_left = 200.0
 margin_top = 184.0
 margin_right = 407.0
-margin_bottom = 403.0
+margin_bottom = 391.0
 rect_pivot_offset = Vector2( 136, 184 )
 theme = ExtResource( 3 )
 custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
