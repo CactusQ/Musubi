@@ -11,11 +11,11 @@ enum ItemType {
 }
 
 var items = {
-	0: 2000, #Spam
-	1: 2000, #Rice
-	2: 2000, #Nori
-	3: 2000, #Plastic
-	4: 2000  #Posters
+	0: 0, #Spam
+	1: 0, #Rice
+	2: 0, #Nori
+	3: 0, #Plastic
+	4: 0  #Posters
 } setget _update_items
 
 func _update_items(new):
@@ -53,8 +53,7 @@ func _ready():
 	_prepare_new_day()
 
 func _prepare_new_day():
-	# delete all posters and rice
-	items[3] = 0
+	# delete all posters 
 	items[4] = 0
 	current_day += 1
 	if current_day > get_parent().game_length_days:
@@ -67,11 +66,6 @@ func _generate_new_weather():
 	rng.randomize()
 	temperature = int(rng.randf_range(65.0, 90.0))
 	weather = WeatherType.keys()[randi() % WeatherType.size()]
-
-func _on_Button_pressed():
-	self.spam += 1
-	self.balance_usd += 3
-	add_child(load("Crafting.tscn").instance())
 
 func _render_all():
 	$Day.text = "Day "+ str(self.current_day) + " / " + str(get_parent().game_length_days)
