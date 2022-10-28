@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://buttons/_play_again_button.png" type="Texture" id=1]
+[ext_resource path="res://scripts/GameOver.gd" type="Script" id=2]
+[ext_resource path="res://images/game_over_scene.png" type="Texture" id=3]
+[ext_resource path="res://fonts/CooperBlackStd.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://SubtitleFont.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 4 )
+
+[node name="game_over_scene" type="Node2D"]
+z_index = 100
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 399.0
+margin_top = 613.0
+margin_right = 1295.0
+margin_bottom = 826.0
+rect_scale = Vector2( 0.25, 0.25 )
+icon = ExtResource( 1 )
+flat = true
+
+[node name="GAME OVER" type="Label" parent="."]
+margin_top = 473.0
+margin_right = 1024.0
+margin_bottom = 554.0
+custom_colors/font_color = Color( 0.0392157, 0, 0.576471, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+align = 1
+valign = 1
+
+[node name="Subtitle" type="Label" parent="."]
+margin_left = -1.0
+margin_top = 555.0
+margin_right = 1023.0
+margin_bottom = 597.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.0352941, 0.372549, 0.211765, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "You have sold X musubi"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

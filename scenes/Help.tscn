@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Help.gd" type="Script" id=1]
+[ext_resource path="res://fonts/MinionPro-Regular.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://buttons/back_to_store.png" type="Texture" id=3]
+[ext_resource path="res://Images/Storytelling.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 2 )
+
+[node name="help_scene" type="Node2D"]
+z_index = 200
+script = ExtResource( 1 )
+
+[node name="blank_background" type="Sprite" parent="."]
+texture = ExtResource( 6 )
+centered = false
+
+[node name="BackToStoreButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 272.0
+margin_top = 632.0
+margin_right = 1111.0
+margin_bottom = 919.0
+rect_scale = Vector2( 0.25, 0.25 )
+rect_pivot_offset = Vector2( 176, 35 )
+icon = ExtResource( 3 )
+flat = true
+
+[node name="IntroText" type="Label" parent="."]
+margin_left = 112.0
+margin_top = 279.0
+margin_right = 920.0
+margin_bottom = 640.0
+rect_pivot_offset = Vector2( -538, 66 )
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Your goal is to maximize your profit. 
+Before each day you can buy ingredients and choose a style of musubi for the day. More expensive styles have a lower chance of selling.
+
+Choosing the style is free, but 1 musubi costs one of each shop item (spam, rice, nori, wrap) to make.
+
+You can also buy posters to increase foot traffic on that day. 
+More foot traffic means more chances to sell musubi.
+Foot traffic is also influenced by the today's events. A school assembly will increase while test days will decrease potential customers.
+
+Posters and left over rice expire after each day."
+autowrap = true
+
+[connection signal="pressed" from="BackToStoreButton" to="." method="_on_BackToStoreButton_pressed"]

@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://buttons/Lets_go_button.png" type="Texture" id=2]
+[ext_resource path="res://fonts/MinionPro-Regular.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/CooperBlackStd.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Images/Storytelling.png" type="Texture" id=5]
+[ext_resource path="res://scripts/Story.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 26
+font_data = ExtResource( 3 )
+
+[node name="Storytelling_scene" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="blank_background" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Header" type="Label" parent="."]
+margin_top = 262.0
+margin_right = 1024.0
+margin_bottom = 362.0
+rect_pivot_offset = Vector2( -538, 66 )
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.0392157, 0, 0.576471, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Welcome to Musubi Madness!"
+align = 1
+valign = 1
+
+[node name="IntroText" type="Label" parent="."]
+margin_left = 112.0
+margin_top = 364.0
+margin_right = 920.0
+margin_bottom = 671.0
+rect_pivot_offset = Vector2( -538, 66 )
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+autowrap = true
+
+[node name="LetsgoButton" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 417.0
+margin_top = 626.0
+margin_right = 1245.0
+margin_bottom = 839.0
+rect_scale = Vector2( 0.25, 0.25 )
+icon = ExtResource( 2 )
+flat = true
+
+[connection signal="pressed" from="LetsgoButton" to="." method="_on_LetsgoButton_pressed"]
