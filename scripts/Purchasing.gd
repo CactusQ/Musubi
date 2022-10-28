@@ -24,8 +24,9 @@ func _update_items(new):
 	$Footer/PlasticCountLabel.text = str(new[3])
 	$Footer/PosterCountLabel.text = str(new[4])
 	
-var POSTER_PRICE = 10
-	
+var POSTER_PRICE = 20
+var POSTER_AMOUNT = 10
+
 # GAME VARIABLES
 var current_day = 0 setget _set_day
 func _set_day(x):
@@ -97,15 +98,14 @@ func _on_PlasticBuyButton_pressed():
 	add_child(shop)
 
 func _on_PosterBuyButton_pressed():
-	balance_usd -= 10
-	items[4] = 20
+	balance_usd -= POSTER_PRICE
+	items[4] = int(rng.randfn(POSTER_AMOUNT, POSTER_AMOUNT*0.3))
 	_render_all()
 
 func _on_ContinueButton_pressed():
 	var crafting_scene = load("res://scenes/6Crafting.tscn").instance()
 	add_child(crafting_scene)
 
-
 func _on_HelpButton_pressed():
 	add_child(load("res://scenes/Help.tscn").instance())
-	
+

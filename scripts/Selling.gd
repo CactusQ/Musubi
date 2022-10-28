@@ -49,7 +49,7 @@ func _ready():
 	
 	# Increase amount of people walking by depending on amount of posters
 	var num_posters = purchasing.items[4]
-	poster_traffic_inc = pow((1.05), num_posters)
+	poster_traffic_inc = pow((1.1), num_posters)
 	population = int(population * poster_traffic_inc)
 	musubi_sold = 0
 	

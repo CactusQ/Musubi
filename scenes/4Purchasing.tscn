@@ -227,7 +227,7 @@ margin_top = 569.0
 margin_right = 964.0
 margin_bottom = 593.0
 size_flags_vertical = 2
-text = "Buy Posters ($10)"
+text = "Buy Posters ($20)"
 icon_align = 1
 
 [node name="HelpButton" type="Button" parent="."]
