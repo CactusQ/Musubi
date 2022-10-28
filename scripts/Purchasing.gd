@@ -46,16 +46,21 @@ var total_musubi_sold = 0
 var total_population = 0
 
 # External conditions that change every day and influence foot traffic
-var day_conditions = ["Test day", "Normal", "Assembly"]
+var day_conditions = ["Test day", "Field Trip", "No Event", "No Event", "Assembly", "Game Day"]
 var todays_cond = 0
 
 var rng = RandomNumberGenerator.new()
+var daily_price_var = 1.0
 
 func _ready():
 	self.name = "Purchasing"
 	_prepare_new_day()
 
 func _prepare_new_day():
+	
+	# Generate new price fluctuations for the day
+	daily_price_var = rng.randfn(1, 0.25)
+	
 	# Delete rice and posters
 	self.items[1] = 0
 	self.items[4] = 0

@@ -148,5 +148,5 @@ valign = 1
 [connection signal="pressed" from="Buy2" to="." method="_on_Buy2_pressed"]
 [connection signal="pressed" from="Buy3" to="." method="_on_Buy3_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_ContinueButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

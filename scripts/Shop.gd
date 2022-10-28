@@ -11,6 +11,9 @@ var names = {
 	2:"Nori", 
 	3:"Wraps", 
 	4:"Posters"}
+	
+# Increasing noise, will increase randomization for all prices
+var NOISE = 0.25
 
 # Item quantities
 var qty = {
@@ -35,8 +38,19 @@ var backgrounds = {
 	3:"shop_wrap.png"
 }
 
+func round_place(num, places):
+	return (round(num*pow(10, places))/pow(10, places))
+	
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	# Calculate new prices based on daily price fluctuations
+	var x = get_parent().daily_price_var
+	for key in prices.keys():
+		for i in range(len(prices[key])):
+			prices[key][i] = round_place(prices[key][i]*x, 2)
+	
 	$shop_background.texture = load("res://images/"+backgrounds[item])
 	item_name = names[item]
 	$Item1.text = str(qty[item][0])+" for $"+str(prices[item][0])

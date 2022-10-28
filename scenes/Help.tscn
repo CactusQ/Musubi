@@ -6,7 +6,7 @@
 [ext_resource path="res://Images/Storytelling.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
-size = 24
+size = 20
 font_data = ExtResource( 2 )
 
 [node name="help_scene" type="Node2D"]
@@ -32,22 +32,24 @@ icon = ExtResource( 3 )
 flat = true
 
 [node name="IntroText" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 279.0
-margin_right = 920.0
-margin_bottom = 640.0
+margin_left = 80.0
+margin_top = 288.0
+margin_right = 944.0
+margin_bottom = 649.0
 rect_pivot_offset = Vector2( -538, 66 )
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Your goal is to maximize your profit. 
+text = "Help Leilani maximize her profit. 
 Before each day you can buy ingredients and choose a style of musubi for the day. More expensive styles have a lower chance of selling.
 
-Choosing the style is free, but 1 musubi costs one of each shop item (spam, rice, nori, wrap) to make.
+Choosing the style is free, but making 1 musubi costs one of each shop item (spam, rice, nori, plastic wrap).
 
-You can also buy posters to increase foot traffic on that day. 
-More foot traffic means more chances to sell musubi.
-Foot traffic is also influenced by the today's events. A school assembly will increase while test days will decrease potential customers.
+You can also buy posters to promote your business in the student restrooms. 
+This will lead to more foot traffic and thus more chances to sell musubi.
+
+Foot traffic may also be influenced by dailys events.
+Game days and school assemblys will increase the amount of potential customers, while field trips and test days will keep the hallways more empty.
 
 Posters and left over rice expire after each day."
 autowrap = true

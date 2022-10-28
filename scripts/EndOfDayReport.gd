@@ -17,12 +17,12 @@ func _ready():
 	$Subtitle.text = "You sold " +str(sold)+" "+str(style_name)+" musubi for $"+str(prof)+" today."
 	
 	if sold > 0 and selling.sold_out:
-		$Subtitle.text += " (sold out!)"
+		$Subtitle.text += " (Sold out!)"
 
 	# Display end of day statistics
 	$RiceSubtitle.visible = purchasing.items[1] != 0
 	$PosterSubtitle.visible = purchasing.items[4] != 0
-	$PopSubtitle.text = str(pop)+" people walked by your stand."
+	$PopSubtitle.text = str(pop)+" people walked by."
 	
 	var x = round_place(selling.poster_traffic_inc, 2)
 	$PosterSubtitle.text = "Your posters created "+str(float(x))+"X more traffic than usual today."

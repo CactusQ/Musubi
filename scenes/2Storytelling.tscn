@@ -10,8 +10,7 @@
 size = 50
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 26
+[sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 3 )
 
 [node name="Storytelling_scene" type="Node2D"]
@@ -22,27 +21,35 @@ texture = ExtResource( 5 )
 centered = false
 
 [node name="Header" type="Label" parent="."]
-margin_top = 262.0
+margin_top = 251.0
 margin_right = 1024.0
-margin_bottom = 362.0
+margin_bottom = 351.0
 rect_pivot_offset = Vector2( -538, 66 )
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0.0392157, 0, 0.576471, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Welcome to Musubi Madness!"
+text = "Welcome to Musubi Mayhem!"
 align = 1
 valign = 1
 
 [node name="IntroText" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 364.0
-margin_right = 920.0
-margin_bottom = 671.0
+margin_left = 68.0
+margin_top = 355.0
+margin_right = 956.0
+margin_bottom = 643.0
 rect_pivot_offset = Vector2( -538, 66 )
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 2 )
-text = "    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+custom_fonts/font = SubResource( 4 )
+text = "Howzit?! Welcome to Musubi Mayhem at Kahuku High School, where musubi sales by students are also not allowed! Leilani, your good friend from the hanabata days is starting her senior year and trying to make some extra money for college. 
+
+Procedures: In the mornings, at 7:45 am, meet Leilani in the D-building hallway to collect the red hot bag of musubi. Sales can be done throughout the school day but you need to be as stealthy as a shark circling someone on a surfboard to avoid getting busted. When the final bell rings at 2:35 pm, you will meet Leilani in the same place to give her back the bag.
+
+Obstacles: Keep your eye out for teachers or administrators, who may randomly pop up during peak selling times or customers that threaten to rat you out if you don’t give them free musubi. 
+
+Keeping customers happy: No one likes cold or smushed up musubi so be careful with the bag. Any unsold musubi also means a loss to the business since they can’t be served again the next day.
+
+At the end of 5, 10, or 20 days, you’ll see how much money you made to help Leilani get closer to her goal. "
 autowrap = true
 
 [node name="LetsgoButton" type="Button" parent="."]
@@ -51,9 +58,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 417.0
-margin_top = 626.0
+margin_top = 667.0
 margin_right = 1245.0
-margin_bottom = 839.0
+margin_bottom = 880.0
 rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 2 )
 flat = true

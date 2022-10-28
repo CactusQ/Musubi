@@ -14,7 +14,7 @@ var BASELINE_CHANCE_OF_SELLING = 0.15
 var purchasing = null
 
 # How daily conditions influence foot traffic
-var cond_to_chance = [0.75, 1.0, 1.25]
+var cond_to_chance = [0.5, 0.75, 1.0, 1.0, 1.25, 1.5]
 
 
 # Cost of making one musubi
@@ -24,6 +24,8 @@ var recipe = {
 	2: 1, # Nori
 	3: 1, # Plastic
 }
+
+
 
 var rng = RandomNumberGenerator.new()
 
@@ -37,7 +39,7 @@ func _ready():
 	todays_price = crafting.prices[crafting.todays_style]
 	
 	# Calculate chance of selling depending on price and some randomness
-	var chance_of_selling = rng.randfn(BASELINE_CHANCE_OF_SELLING, BASELINE_CHANCE_OF_SELLING*0.25)
+	var chance_of_selling = rng.randfn(BASELINE_CHANCE_OF_SELLING, BASELINE_CHANCE_OF_SELLING*0.20)
 	chance_of_selling /= (todays_price)
 	
 	# Calculate population (people walking by) of potential buyers walking by
