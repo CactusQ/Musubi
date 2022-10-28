@@ -154,7 +154,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 422.0
 margin_top = 569.0
-margin_right = 1129.0
+margin_right = 1250.0
 margin_bottom = 782.0
 rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 9 )
@@ -222,7 +222,7 @@ flat = true
 icon_align = 1
 
 [node name="PosterBuyButton" type="Button" parent="."]
-margin_left = 836.0
+margin_left = 840.0
 margin_top = 569.0
 margin_right = 964.0
 margin_bottom = 593.0
@@ -231,13 +231,32 @@ text = "Buy Posters ($20)"
 icon_align = 1
 
 [node name="HelpButton" type="Button" parent="."]
-margin_left = 57.0
+margin_left = 56.0
 margin_top = 569.0
-margin_right = 185.0
+margin_right = 183.0
 margin_bottom = 593.0
 size_flags_vertical = 2
 text = "Help"
 icon_align = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 56.0
+margin_top = 600.0
+margin_right = 183.0
+margin_bottom = 622.0
+min_value = -30.0
+max_value = 0.0
+
+[node name="Label" type="Label" parent="HSlider"]
+margin_left = -1.0
+margin_top = 22.0
+margin_right = 127.0
+margin_bottom = 53.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Volume
+"
+align = 1
+valign = 1
 
 [connection signal="pressed" from="ContinueButton" to="." method="_on_ContinueButton_pressed"]
 [connection signal="pressed" from="NoriBuyButton" to="." method="_on_NoriBuyButton_pressed"]
@@ -246,3 +265,4 @@ icon_align = 1
 [connection signal="pressed" from="SpamBuyButton" to="." method="_on_SpamBuyButton_pressed"]
 [connection signal="pressed" from="PosterBuyButton" to="." method="_on_PosterBuyButton_pressed"]
 [connection signal="pressed" from="HelpButton" to="." method="_on_HelpButton_pressed"]
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ES_Caribbean Arcade - Christian Nanzell.mp3-99a65dd3b8fc916af842f15fdf5dccf1.mp3str"
+
+[deps]
+
+source_file="res://ES_Caribbean Arcade - Christian Nanzell.mp3"
+dest_files=[ "res://.import/ES_Caribbean Arcade - Christian Nanzell.mp3-99a65dd3b8fc916af842f15fdf5dccf1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
