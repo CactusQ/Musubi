@@ -31,7 +31,6 @@ var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	self.name = "Selling"
 	purchasing = find_parent("Purchasing")
 	var crafting = find_parent("Crafting")
