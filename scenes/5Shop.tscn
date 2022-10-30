@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://TitleFont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Souvenir-Bold.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://buttons/back_to_store.png" type="Texture" id=2]
 [ext_resource path="res://images/shop_nori.png" type="Texture" id=3]
 [ext_resource path="res://scripts/Shop.gd" type="Script" id=4]
 [ext_resource path="res://fonts/CooperBlackStd.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://buttons/buy_button-02.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -12,11 +13,15 @@
 /fonts/SpamFont = SubResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
-size = 30
-font_data = ExtResource( 2 )
+size = 40
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 37
+size = 50
 font_data = ExtResource( 6 )
 
 [node name="Scene" type="Node2D"]
@@ -49,10 +54,9 @@ margin_right = 351.0
 margin_bottom = 431.0
 rect_pivot_offset = Vector2( 136, 184 )
 theme = SubResource( 2 )
-custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "10 Spam:"
+text = "label"
 align = 1
 valign = 1
 
@@ -61,12 +65,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 140.0
-margin_top = 484.0
-margin_right = 306.0
-margin_bottom = 524.0
+margin_left = 61.0
+margin_top = 438.0
+margin_right = 500.0
+margin_bottom = 787.0
+rect_scale = Vector2( 0.25, 0.25 )
 rect_pivot_offset = Vector2( 136, 16 )
 text = "Buy"
+icon = ExtResource( 7 )
+flat = true
 
 [node name="Item2" type="Label" parent="."]
 margin_left = 384.0
@@ -75,10 +82,9 @@ margin_right = 648.0
 margin_bottom = 431.0
 rect_pivot_offset = Vector2( 136, 184 )
 theme = SubResource( 2 )
-custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "10 Spam:"
+text = "label"
 align = 1
 valign = 1
 
@@ -87,12 +93,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 432.0
-margin_top = 484.0
-margin_right = 598.0
-margin_bottom = 524.0
+margin_left = 360.0
+margin_top = 438.0
+margin_right = 799.0
+margin_bottom = 787.0
+rect_scale = Vector2( 0.25, 0.25 )
 rect_pivot_offset = Vector2( 136, 16 )
 text = "Buy"
+icon = ExtResource( 7 )
+flat = true
 
 [node name="Item3" type="Label" parent="."]
 margin_left = 672.0
@@ -101,10 +110,9 @@ margin_right = 936.0
 margin_bottom = 431.0
 rect_pivot_offset = Vector2( 136, 184 )
 theme = SubResource( 2 )
-custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "10 Spam:"
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "label"
 align = 1
 valign = 1
 
@@ -113,24 +121,26 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 720.0
-margin_top = 484.0
-margin_right = 886.0
-margin_bottom = 524.0
+margin_left = 648.0
+margin_top = 438.0
+margin_right = 1087.0
+margin_bottom = 787.0
+rect_scale = Vector2( 0.25, 0.25 )
 rect_pivot_offset = Vector2( 136, 16 )
 text = "Buy"
+icon = ExtResource( 7 )
+flat = true
 
 [node name="BackButton" type="Button" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 432.0
-margin_top = 583.0
-margin_right = 598.0
-margin_bottom = 623.0
-rect_pivot_offset = Vector2( 136, 16 )
+margin_left = 408.0
+margin_top = 569.0
+margin_right = 1249.0
+margin_bottom = 790.0
+rect_scale = Vector2( 0.25, 0.25 )
 text = "Back"
+icon = ExtResource( 2 )
+flat = true
+clip_text = true
 
 [node name="Subtitle" type="Label" parent="."]
 margin_top = 75.5
@@ -148,3 +158,8 @@ valign = 1
 [connection signal="pressed" from="Buy2" to="." method="_on_Buy2_pressed"]
 [connection signal="pressed" from="Buy3" to="." method="_on_Buy3_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
+<<<<<<< Updated upstream
+=======
+[connection signal="pressed" from="BackButton" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_ContinueButton_pressed"]
+>>>>>>> Stashed changes

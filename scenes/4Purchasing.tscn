@@ -1,7 +1,7 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/Purchasing.gd" type="Script" id=1]
-[ext_resource path="res://Souvenir-Bold.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/MinionPro-Regular.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://buttons/_buy_rice_button.png" type="Texture" id=5]
 [ext_resource path="res://buttons/_buy_nori_button.png" type="Texture" id=6]
 [ext_resource path="res://buttons/_buy_spam_button.png" type="Texture" id=7]
@@ -11,14 +11,18 @@
 [ext_resource path="res://images/Footer.png" type="Texture" id=11]
 [ext_resource path="res://fonts/CooperBlackStd.otf" type="DynamicFontData" id=12]
 
+[sub_resource type="DynamicFont" id=4]
+size = 50
+font_data = ExtResource( 12 )
+
 [sub_resource type="DynamicFont" id=2]
-size = 64
-font_data = ExtResource( 3 )
+size = 100
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
-size = 80
+size = 120
 outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 3 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 37
@@ -27,14 +31,22 @@ font_data = ExtResource( 12 )
 [node name="purchasing_scene" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_right = 1024.0
-margin_bottom = 768.0
-
 [node name="purchasing_background" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 10 )
 centered = false
+
+[node name="subtitle" type="Label" parent="."]
+margin_top = 83.0
+margin_right = 1024.0
+margin_bottom = 197.0
+rect_pivot_offset = Vector2( 569, 248 )
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.0392157, 0, 0.576471, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "What supplies do you need?"
+align = 1
+valign = 1
 
 [node name="Footer" type="Sprite" parent="."]
 position = Vector2( 0, 612 )
@@ -52,7 +64,7 @@ margin_bottom = 410.0
 rect_pivot_offset = Vector2( 136, 184 )
 size_flags_horizontal = 2
 size_flags_vertical = 2
-custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "0"
@@ -66,7 +78,7 @@ margin_top = 444.0
 margin_right = 3288.0
 margin_bottom = 526.0
 rect_pivot_offset = Vector2( 136, 184 )
-custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "0"
@@ -78,7 +90,7 @@ margin_top = 444.0
 margin_right = 2466.0
 margin_bottom = 526.0
 rect_pivot_offset = Vector2( 136, 184 )
-custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "0"
@@ -92,7 +104,8 @@ margin_top = 328.0
 margin_right = 3124.0
 margin_bottom = 412.0
 rect_pivot_offset = Vector2( 136, 184 )
-custom_colors/font_color = Color( 0.0745098, 0.0588235, 0.607843, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "0"
@@ -115,7 +128,7 @@ margin_right = 1280.0
 margin_bottom = 560.0
 rect_pivot_offset = Vector2( 173, 57 )
 input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 0.164706, 0.545098, 0.74902, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "X / Y"
 align = 1
@@ -128,7 +141,8 @@ margin_right = 3711.0
 margin_bottom = 358.0
 rect_pivot_offset = Vector2( 173, 57 )
 input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 0.137255, 0.482353, 0.117647, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "$0"
 align = 1
@@ -141,7 +155,7 @@ margin_right = 2016.0
 margin_bottom = 556.0
 rect_pivot_offset = Vector2( 74, 28 )
 input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 0.447059, 0.156863, 0.666667, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "condition"
 align = 1
@@ -152,9 +166,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 422.0
+margin_left = 408.0
 margin_top = 569.0
-margin_right = 1250.0
+margin_right = 1236.0
 margin_bottom = 782.0
 rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 9 )

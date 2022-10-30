@@ -13,10 +13,10 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="start_game_button" type="TextureButton" parent="."]
-margin_left = 419.0
-margin_top = 648.0
-margin_right = 1235.0
-margin_bottom = 855.0
+margin_left = 417.0
+margin_top = 671.0
+margin_right = 1233.0
+margin_bottom = 878.0
 rect_scale = Vector2( 0.25, 0.25 )
 texture_normal = ExtResource( 2 )
 

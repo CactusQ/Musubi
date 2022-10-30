@@ -39,3 +39,7 @@ func _on_Buy3_pressed():
 
 func _on_BackButton_pressed():
 	get_parent().remove_child(self)
+
+func _on_checkbox1_pressed():
+	todays_style = 0
+	add_child(load("res://scenes/7Selling.tscn").instance())

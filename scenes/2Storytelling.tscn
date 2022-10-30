@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://images/blank_logo_ .png" type="Texture" id=1]
 [ext_resource path="res://buttons/Lets_go_button.png" type="Texture" id=2]
 [ext_resource path="res://fonts/MinionPro-Regular.otf" type="DynamicFontData" id=3]
 [ext_resource path="res://fonts/CooperBlackStd.otf" type="DynamicFontData" id=4]
-[ext_resource path="res://Images/Storytelling.png" type="Texture" id=5]
 [ext_resource path="res://scripts/Story.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=3]
@@ -11,19 +11,21 @@ size = 50
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=4]
+size = 18
 font_data = ExtResource( 3 )
 
 [node name="Storytelling_scene" type="Node2D"]
 script = ExtResource( 6 )
 
 [node name="blank_background" type="Sprite" parent="."]
-texture = ExtResource( 5 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
 centered = false
 
 [node name="Header" type="Label" parent="."]
-margin_top = 251.0
+margin_top = 188.0
 margin_right = 1024.0
-margin_bottom = 351.0
+margin_bottom = 288.0
 rect_pivot_offset = Vector2( -538, 66 )
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0.0392157, 0, 0.576471, 1 )
@@ -33,10 +35,10 @@ align = 1
 valign = 1
 
 [node name="IntroText" type="Label" parent="."]
-margin_left = 68.0
-margin_top = 355.0
-margin_right = 956.0
-margin_bottom = 643.0
+margin_left = 120.0
+margin_top = 282.0
+margin_right = 904.0
+margin_bottom = 650.0
 rect_pivot_offset = Vector2( -538, 66 )
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -58,9 +60,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 417.0
-margin_top = 667.0
+margin_top = 671.0
 margin_right = 1245.0
-margin_bottom = 880.0
+margin_bottom = 884.0
 rect_scale = Vector2( 0.25, 0.25 )
 icon = ExtResource( 2 )
 flat = true

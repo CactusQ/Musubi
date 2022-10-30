@@ -36,6 +36,7 @@ func _set_day(x):
 
 var STARTING_BALANCE = 20
 var balance_usd = STARTING_BALANCE setget _set_balance
+	
 func _set_balance(x):
 	balance_usd = x
 	$Footer/Balance.text =  "$"+str(balance_usd)
