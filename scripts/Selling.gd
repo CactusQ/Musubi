@@ -1,5 +1,6 @@
 extends Node2D
 
+
 # Daily variables
 var musubi_sold = 0
 var profit = 0
@@ -78,3 +79,20 @@ func _not_enough_stock() -> bool:
 
 func _on_EndDayButton_pressed():
 	add_child(load("res://scenes/8EndOfDayReport.tscn").instance())
+	
+	
+	# Working with moving the sprites (Jenica)
+	
+var exit_frame = true
+
+func _process(delta):
+		pass
+#	$asian_girl.position.x += 5
+#	$blueshirt_girl.position.x += 3
+#	$redshirt_boy.position.x += 4
+#	$scooter_boy.position.x += 6
+#	$redshirt_girl.position.x += 3
+	
+			
+	
+

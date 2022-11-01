@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scripts/Selling.gd" type="Script" id=1]
 [ext_resource path="res://characters/_scooterguy4-11.png" type="Texture" id=2]
@@ -21,14 +21,6 @@
 [ext_resource path="res://characters/_blueshirt1.png" type="Texture" id=19]
 [ext_resource path="res://characters/_redguy3.png" type="Texture" id=20]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 2 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 13 ) ],
@@ -37,9 +29,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 4 ), ExtResource( 18 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -61,6 +53,264 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 18 ), ExtResource( 3 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=7]
+resource_name = "walking_characters"
+length = 28.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("scooter_boy:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.0117362, 1.77513, 2.33386, 4.87724, 16.7271, 19.3251, 19.9456, 21.689 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -130, 400 ), Vector2( 450, 400 ), Vector2( 450, 400 ), Vector2( 1200, 400 ), Vector2( -130, 400 ), Vector2( 500, 400 ), Vector2( 500, 400 ), Vector2( 1200, 400 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("asian_girl:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.210834, 4.97749, 6.3055, 12.9104 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -120, 374 ), Vector2( 480, 374 ), Vector2( 500, 374 ), Vector2( 1200, 374 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("redshirt_boy:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 3.7509, 7.07384, 9.60328, 12.8401, 18.0915, 21.2001, 23.2365, 25.8946 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -120, 320 ), Vector2( 450, 320 ), Vector2( 450, 320 ), Vector2( 1200, 320 ), Vector2( -120, 320 ), Vector2( 450, 320 ), Vector2( 480, 320 ), Vector2( 1200, 320 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("scooter_boy:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.103422, 5.37794, 16.6509, 21.9845 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("redshirt_boy:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3.75267, 12.8615, 18.049, 25.9589 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("asian_girl:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.107179, 13.6761 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("blueshirt_girl:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 8.25282, 12.3035, 14.8954, 19.2958 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -120, 339.625 ), Vector2( 500, 339.625 ), Vector2( 500, 339.625 ), Vector2( 1200, 339.625 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("blueshirt_girl:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 8.25282, 19.4177 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("redshirt_girl:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 7.67405, 15.2409, 18.0705, 21.0286 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -120, 320 ), Vector2( 490, 320 ), Vector2( 490, 320 ), Vector2( 1200, 320 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("redshirt_girl:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.557333, 7.67405, 21.1358 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "buyers_rtl"
+length = 28.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("scooter_boy2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 3.63967, 8.80144, 16.0938, 19.362 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 375 ), Vector2( -200, 400 ), Vector2( 1200, 390.817 ), Vector2( -200, 390.817 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("scooter_boy2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 3.56539, 8.81443, 16.0442, 19.4611 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ true, false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("redshirt_boy2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 7.00698, 14.2615, 23.5217, 25.2301 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 320 ), Vector2( -200, 320 ), Vector2( 1200, 320 ), Vector2( -200, 320 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("redshirt_boy2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 6.9327, 14.3111, 23.5217, 25.1805 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("asian_girl2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.297116, 5.02621 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1200, 374 ), Vector2( -200, 374 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("asian_girl2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.346635, 4.95193 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("blueshirt_girl2:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.08942, 11.4637, 25.2995, 27.1898 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1169.77, 339.625 ), Vector2( -200, 339.625 ), Vector2( 1169.77, 339.625 ), Vector2( -200, 339.625 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("blueshirt_girl2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 1.0399, 11.5132, 25.1805, 27.2851 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("redshirt_girl2:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 1.36178, 9.16106, 16.8866, 23.0884 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1196.9, 320 ), Vector2( -200, 320 ), Vector2( 1196.9, 320 ), Vector2( -200, 320 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("redshirt_girl2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 1.18846, 9.18582, 16.9356, 23.1007 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false ]
+}
+
 [node name="Selling_scene" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -69,40 +319,83 @@ scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
 centered = false
 
-[node name="scooter_boy" type="AnimatedSprite" parent="."]
-position = Vector2( 686.625, 312.625 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 1 )
-frame = 2
-playing = true
-
 [node name="asian_girl" type="AnimatedSprite" parent="."]
-position = Vector2( 391, 374 )
+position = Vector2( 491.161, 374 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 2
 playing = true
 
-[node name="redshirt_girl" type="AnimatedSprite" parent="."]
-position = Vector2( 255.625, 313.625 )
+[node name="scooter_boy" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 1105.57, 400 )
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 3 )
+frames = SubResource( 1 )
 frame = 3
-speed_scale = 0.75
 playing = true
 
 [node name="redshirt_boy" type="AnimatedSprite" parent="."]
-position = Vector2( 90.625, 323.625 )
+position = Vector2( 217.529, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
 frame = 2
 playing = true
 
 [node name="blueshirt_girl" type="AnimatedSprite" parent="."]
-position = Vector2( 894.625, 339.625 )
+visible = false
+position = Vector2( 77.2727, 339.625 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
 playing = true
+
+[node name="redshirt_girl" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 56.2451, 320 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 6 )
+frame = 3
+playing = true
+
+[node name="asian_girl2" type="AnimatedSprite" parent="."]
+position = Vector2( 533.526, 374 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+frame = 3
+playing = true
+flip_h = true
+
+[node name="scooter_boy2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 1075.57, 376.406 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+frame = 3
+playing = true
+flip_h = true
+
+[node name="redshirt_boy2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 561.558, 320 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 4 )
+frame = 1
+playing = true
+flip_h = true
+
+[node name="blueshirt_girl2" type="AnimatedSprite" parent="."]
+position = Vector2( 977.136, 339.625 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 5 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="redshirt_girl2" type="AnimatedSprite" parent="."]
+position = Vector2( 984.364, 320 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 6 )
+frame = 3
+playing = true
+flip_h = true
 
 [node name="EndDayButton" type="Button" parent="."]
 margin_left = 408.0
@@ -114,5 +407,13 @@ icon = ExtResource( 9 )
 flat = true
 align = 0
 icon_align = 1
+
+[node name="buyers_ltr" type="AnimationPlayer" parent="."]
+autoplay = "walking_characters"
+anims/walking_characters = SubResource( 7 )
+
+[node name="buyers_rtl" type="AnimationPlayer" parent="."]
+autoplay = "buyers_rtl"
+anims/buyers_rtl = SubResource( 8 )
 
 [connection signal="pressed" from="EndDayButton" to="." method="_on_EndDayButton_pressed"]

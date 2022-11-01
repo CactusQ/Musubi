@@ -80,7 +80,7 @@ rect_rotation = -0.858457
 rect_pivot_offset = Vector2( 136, 16 )
 text = "Choose"
 
-[node name="checkbox1" type="TextureButton" parent="."]
+[node name="regular" type="TextureButton" parent="."]
 margin_left = 270.0
 margin_top = 244.0
 margin_right = 491.0
@@ -127,7 +127,7 @@ rect_rotation = -0.858457
 rect_pivot_offset = Vector2( 136, 16 )
 text = "Choose"
 
-[node name="checkbox2" type="TextureButton" parent="."]
+[node name="furukaki" type="TextureButton" parent="."]
 margin_left = 272.0
 margin_top = 341.0
 margin_right = 493.0
@@ -174,7 +174,7 @@ rect_rotation = -0.858457
 rect_pivot_offset = Vector2( 136, 16 )
 text = "Choose"
 
-[node name="checkbox3" type="TextureButton" parent="."]
+[node name="teriyaki" type="TextureButton" parent="."]
 margin_left = 277.0
 margin_top = 438.0
 margin_right = 498.0
@@ -199,10 +199,14 @@ rect_pivot_offset = Vector2( 335, 0 )
 icon = ExtResource( 8 )
 flat = true
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="pressed" from="Buy1" to="." method="_on_Buy1_pressed"]
-[connection signal="pressed" from="checkbox1" to="." method="_on_checkbox1_pressed"]
+[connection signal="pressed" from="regular" to="." method="_on_regular_pressed"]
 [connection signal="pressed" from="Buy2" to="." method="_on_Buy2_pressed"]
-[connection signal="pressed" from="checkbox2" to="." method="_on_checkbox1_pressed"]
+[connection signal="pressed" from="furukaki" to="." method="_on_furukaki_pressed"]
 [connection signal="pressed" from="Buy3" to="." method="_on_Buy3_pressed"]
-[connection signal="pressed" from="checkbox3" to="." method="_on_checkbox1_pressed"]
+[connection signal="pressed" from="teriyaki" to="." method="_on_teriyaki_pressed"]
 [connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
