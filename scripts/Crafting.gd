@@ -15,15 +15,15 @@ var styles = {
 	
 var prices = {
 	0: 1,
-	1: 1.2,
-	2: 1.4,
+	1: 2,
+	2: 3,
 }
 
 func _ready():
 	self.name = "Crafting"
-	$Item1.text = styles[0] + " ($" +str(prices[0])+ ")"
-	$Item2.text = styles[1] + " ($" +str(prices[1])+ ")"
-	$Item3.text = styles[2] + " ($" +str(prices[2])+ ")"
+	$Item1.text = styles[0] + " ($" +int(prices[0])+ ")"
+	$Item2.text = styles[1] + " ($" +int(prices[1])+ ")"
+	$Item3.text = styles[2] + " ($" +int(prices[2])+ ")"
 
 #func _on_Buy1_pressed():
 #	todays_style = 0
