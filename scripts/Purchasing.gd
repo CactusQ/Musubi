@@ -28,7 +28,7 @@ var POSTER_PRICE = 20
 var POSTER_AMOUNT = 10
 
 # GAME VARIABLES
-var current_day = 5 setget _set_day
+var current_day = 0 setget _set_day
 func _set_day(x):
 	current_day = x
 	$Footer/Day.text = str(self.current_day) + " / " + \
