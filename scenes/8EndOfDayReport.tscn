@@ -95,4 +95,9 @@ text = "100 people walked by your stand."
 align = 1
 valign = 1
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_right = 1024.0
+margin_bottom = 768.0
+
 [connection signal="pressed" from="OkayButton" to="." method="_on_OkayButton_pressed"]

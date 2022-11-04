@@ -314,6 +314,10 @@ tracks/9/keys = {
 [node name="Selling_scene" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 768.0
+
 [node name="selling_background" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 7 )
@@ -323,6 +327,7 @@ centered = false
 position = Vector2( 491.161, 374 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
+frame = 2
 playing = true
 
 [node name="scooter_boy" type="AnimatedSprite" parent="."]
@@ -330,7 +335,7 @@ visible = false
 position = Vector2( 1105.57, 400 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="redshirt_boy" type="AnimatedSprite" parent="."]
@@ -352,29 +357,30 @@ visible = false
 position = Vector2( 56.2451, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 6 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="asian_girl2" type="AnimatedSprite" parent="."]
-position = Vector2( 533.526, 374 )
+visible = false
+position = Vector2( 1182.13, 374 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 3
+frame = 1
 playing = true
 flip_h = true
 
 [node name="scooter_boy2" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 1075.57, 376.406 )
+position = Vector2( 784.975, 379.689 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 playing = true
 flip_h = true
 
 [node name="redshirt_boy2" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 561.558, 320 )
+position = Vector2( 196.636, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
 frame = 1
@@ -382,7 +388,8 @@ playing = true
 flip_h = true
 
 [node name="blueshirt_girl2" type="AnimatedSprite" parent="."]
-position = Vector2( 977.136, 339.625 )
+visible = false
+position = Vector2( 384.216, 339.625 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
 frame = 2
@@ -390,10 +397,11 @@ playing = true
 flip_h = true
 
 [node name="redshirt_girl2" type="AnimatedSprite" parent="."]
-position = Vector2( 984.364, 320 )
+visible = false
+position = Vector2( 893.671, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 6 )
-frame = 3
+frame = 1
 playing = true
 flip_h = true
 
@@ -416,4 +424,8 @@ anims/walking_characters = SubResource( 7 )
 autoplay = "buyers_rtl"
 anims/buyers_rtl = SubResource( 8 )
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="pressed" from="EndDayButton" to="." method="_on_EndDayButton_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -28,7 +28,6 @@ func _ready():
 	$PosterSubtitle.text = "Your posters created "+str(float(x))+"X more traffic than usual today."
 
 	# Update statistics and balance
-	purchasing.balance_usd += prof
 	purchasing.total_musubi_sold += sold
 	purchasing.total_population += pop
 

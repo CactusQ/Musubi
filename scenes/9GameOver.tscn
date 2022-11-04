@@ -1,6 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://buttons/_play_again_button.png" type="Texture" id=1]
+[ext_resource path="res://buttons/_continue_button.png" type="Texture" id=1]
 [ext_resource path="res://scripts/GameOver.gd" type="Script" id=2]
 [ext_resource path="res://images/game_over_scene.png" type="Texture" id=3]
 [ext_resource path="res://fonts/CooperBlackStd.otf" type="DynamicFontData" id=4]
@@ -10,9 +10,20 @@
 size = 60
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Souvenir-Bold.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 15
+font_data = SubResource( 2 )
+
 [node name="game_over_scene" type="Node2D"]
 z_index = 100
 script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 768.0
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
@@ -44,9 +55,9 @@ valign = 1
 
 [node name="Subtitle" type="Label" parent="."]
 margin_left = -1.0
-margin_top = 555.0
+margin_top = 538.0
 margin_right = 1023.0
-margin_bottom = 597.0
+margin_bottom = 580.0
 input_pass_on_modal_close_click = false
 custom_colors/font_color = Color( 0.0352941, 0.372549, 0.211765, 1 )
 custom_fonts/font = ExtResource( 5 )
@@ -54,4 +65,21 @@ text = "You have sold X musubi"
 align = 1
 valign = 1
 
+[node name="EndTitle" type="Label" parent="."]
+margin_left = 26.0
+margin_top = 531.0
+margin_right = 995.0
+margin_bottom = 678.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0.0352941, 0.372549, 0.211765, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Shootz brah, congrats!!!  You helped Leilani meet her goal of making some extra cash for college!! 
+She’s going to be so psyched!!!  Time for celebrationgo catch some shorebreak at Pounders  
+and pass the word on about how awesome of a friendand musubi seller you are 
+but just don’t let the principal know what your secret side hustle is.
+Cheehoo!! K-den, all pau for now. "
+align = 1
+valign = 1
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="ready" from="Button" to="." method="_on_Button_ready"]

@@ -17,6 +17,10 @@ font_data = ExtResource( 3 )
 [node name="Storytelling_scene" type="Node2D"]
 script = ExtResource( 6 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 768.0
+
 [node name="blank_background" type="Sprite" parent="."]
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 1 )

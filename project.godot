@@ -10,13 +10,15 @@ config_version=4
 
 [application]
 
-config/name="Musubi"
+config/name="Musubi Mayhem"
 run/main_scene="res://scenes/1Main.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://images/Welcome.png"
+config/icon="res://Icon.png"
 
 [display]
 
 window/size/height=768
+window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

@@ -53,9 +53,9 @@ func _ready():
 	
 	$shop_background.texture = load("res://images/"+backgrounds[item])
 	item_name = names[item]
-	$Item1.text = str(qty[item][0])+" for $"+str(prices[item][0])
-	$Item2.text = str(qty[item][1])+" for $"+str(prices[item][1])
-	$Item3.text = str(qty[item][2])+" for $"+str(prices[item][2])
+	$Item1.text = str(qty[item][0])+" for $"+str(prices[item][0]).pad_decimals(2)
+	$Item2.text = str(qty[item][1])+" for $"+str(prices[item][1]).pad_decimals(2)
+	$Item3.text = str(qty[item][2])+" for $"+str(prices[item][2]).pad_decimals(2)
 	_update_shop()
 
 func _update_shop():

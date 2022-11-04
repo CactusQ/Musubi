@@ -28,18 +28,18 @@ var POSTER_PRICE = 20
 var POSTER_AMOUNT = 10
 
 # GAME VARIABLES
-var current_day = 0 setget _set_day
+var current_day = 5 setget _set_day
 func _set_day(x):
 	current_day = x
 	$Footer/Day.text = str(self.current_day) + " / " + \
 		str(get_parent().game_length_days)
 
 var STARTING_BALANCE = 20
-var balance_usd = STARTING_BALANCE setget _set_balance
+var balance_usd = 0 setget _set_balance
 	
 func _set_balance(x):
 	balance_usd = x
-	$Footer/Balance.text =  "$"+str(balance_usd)
+	$Footer/Balance.text =  "$"+str(balance_usd).pad_decimals(2)
 	$PosterBuyButton.disabled = POSTER_PRICE > balance_usd or items[4] > 0
 
 # For Game Over Reporting Scene
@@ -54,13 +54,16 @@ var rng = RandomNumberGenerator.new()
 var daily_price_var = 1.0
 
 func _ready():
+	rng.seed = hash(OS.get_time())
 	self.name = "Purchasing"
+	self.balance_usd = STARTING_BALANCE
 	_prepare_new_day()
 
 func _prepare_new_day():
 	
 	# Generate new price fluctuations for the day
 	daily_price_var = rng.randfn(1, 0.25)
+	$Footer/SoldOut.visible = false
 	
 	# Delete rice and posters
 	self.items[1] = 0
