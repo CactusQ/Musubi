@@ -327,7 +327,7 @@ centered = false
 position = Vector2( 491.161, 374 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="scooter_boy" type="AnimatedSprite" parent="."]
@@ -335,14 +335,14 @@ visible = false
 position = Vector2( 1105.57, 400 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="redshirt_boy" type="AnimatedSprite" parent="."]
 position = Vector2( 217.529, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="blueshirt_girl" type="AnimatedSprite" parent="."]
@@ -350,6 +350,7 @@ visible = false
 position = Vector2( 77.2727, 339.625 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
+frame = 2
 playing = true
 
 [node name="redshirt_girl" type="AnimatedSprite" parent="."]
@@ -357,7 +358,7 @@ visible = false
 position = Vector2( 56.2451, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 6 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="asian_girl2" type="AnimatedSprite" parent="."]
@@ -365,7 +366,7 @@ visible = false
 position = Vector2( 1182.13, 374 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
@@ -374,7 +375,7 @@ visible = false
 position = Vector2( 784.975, 379.689 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
@@ -383,7 +384,6 @@ visible = false
 position = Vector2( 196.636, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 4 )
-frame = 1
 playing = true
 flip_h = true
 
@@ -392,7 +392,7 @@ visible = false
 position = Vector2( 384.216, 339.625 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 5 )
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 
@@ -401,7 +401,7 @@ visible = false
 position = Vector2( 893.671, 320 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 6 )
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 

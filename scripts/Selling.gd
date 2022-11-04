@@ -116,16 +116,22 @@ func _on_Timer_timeout():
 
 	
 func _end_day():
+	
+	# Both the timer and the player can end the day
+	# So we need to check, that the day has has not ended already (race condition)
+	if day_ended == false:
+		day_ended = true
+	
 	# If we end the day prematurely, simulate the remaining sells
 	while not sold_out and simulations_count < population:
 		if _not_enough_stock(): 
 			sold_out = true
+			break
 		if randf() <= chance_of_selling:
 			_sell_musubi_()
 		simulations_count += 1
-	
-	if day_ended == false:
-		day_ended = true
-		add_child(load("res://scenes/8EndOfDayReport.tscn").instance())
+		
+	# Switch scene after all computations are done
+	add_child(load("res://scenes/8EndOfDayReport.tscn").instance())
 	
 

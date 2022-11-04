@@ -264,7 +264,6 @@ margin_right = 1365.0
 margin_bottom = 723.0
 rect_scale = Vector2( 0.25, 0.25 )
 size_flags_vertical = 2
-text = "Buy Posters ($20)"
 icon = ExtResource( 4 )
 flat = true
 icon_align = 1
